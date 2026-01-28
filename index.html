@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teste DISC - RH Flux Consultoria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+ <img id="logo" src="./assets/logo.talita.jpg" alt="RH Flux Consultoria">
+
+
+  <div id="start-screen">
+    <h1>Teste de Perfil DISC</h1>
+    <button id="start-btn">Começar o Teste</button>
+  </div>
+
+  <div id="quiz" style="display:none;">
+    <div id="question" class="question"></div>
+    <div id="options" class="options"></div>
+  </div>
+
+  <div id="results" style="display:none;">
+    <h2>Resultado</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Perfil</th>
+          <th>Pontos</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody id="result-body"></tbody>
+    </table>
+
+    <!-- BOTÃO PDF -->
+    <button id="pdf-btn" onclick="generatePDF()">Gerar PDF</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
