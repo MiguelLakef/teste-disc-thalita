@@ -1,48 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <title>Teste DISC - RH Flux Consultoria</title>
+  <title>Teste DISC</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div id="container">
+  <div id="container">
 
- <img id="logo" src="./assets/logo.talita.jpg" alt="RH Flux Consultoria">
+    <img id="logo" src="./assets/logo.talita.jpg" alt="Logo DISC">
+    <img id="illustration" src="./assets/barra-disc.png" alt="Ilustração DISC">
+    <!-- DICA (fixa durante todo o teste) -->
 
 
-  <div id="start-screen">
-    <h1>Teste de Perfil DISC</h1>
-    <button id="start-btn">Começar o Teste</button>
-  </div>
+    <div id="intro-screen">
+      <h2 class="intro-title">
+        Você está pronta(o) para conhecer seu perfil comportamental predominante?
+      </h2>
 
-  <div id="quiz" style="display:none;">
-    <div id="question" class="question"></div>
-    <div id="options" class="options"></div>
-  </div>
 
-  <div id="results" style="display:none;">
-    <h2>Resultado</h2>
+      <div class="disc-hint">
+        <strong>DICAS:</strong>
+        <ol>
+          <li>Não há resultado bom ou ruim, por isso seja sincera(o).</li>
+          <li>Escolha um momento tranquilo para fazer o teste.</li>
+          <li>Não pense muito, a primeira resposta geralmente será a mais correta.</li>
+          <li>Responda pensando em quem você é, e não em quem gostaria de ser.</li>
+        </ol>
+      </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Perfil</th>
-          <th>Pontos</th>
-          <th>Descrição</th>
-        </tr>
-      </thead>
-      <tbody id="result-body"></tbody>
-    </table>
+      <button id="start-btn">COMEÇAR O TESTE</button>
+    </div>
 
-    <!-- BOTÃO PDF -->
-    <button id="pdf-btn" onclick="generatePDF()">Gerar PDF</button>
-  </div>
+    <div id="quiz" style="display:none;">
+      <div id="fixed-hint" style="display:none;">
+        <strong>DICAS:</strong>
+        <p>
+          Responda de forma sincera. escolha a opção que mais combina com você.
+        </p>
+      </div>
 
-</div>
+      <div id="question" class="question"></div>
+      <div id="options" class="options"></div>
+    </div>
 
-<script src="script.js"></script>
+    <div id="results" style="display:none;">
+     <table>
+  <tr>
+    <th>Perfil</th>
+    <th>Pontos</th>
+    <th>Descrição</th>
+  </tr>
+
+  <tr class="disc-d">
+    <td>D</td>
+    <td id="score-d">0</td>
+    <td>Dominância: assertivo, focado em resultados.</td>
+  </tr>
+
+  <tr class="disc-i">
+    <td>I</td>
+    <td id="score-i">0</td>
+    <td>Influência: comunicativo e persuasivo.</td>
+  </tr>
+
+  <tr class="disc-e">
+    <td>E</td>
+    <td id="score-e">0</td>
+    <td>Estabilidade: paciente e confiável.</td>
+  </tr>
+
+  <tr class="disc-c">
+    <td>C</td>
+    <td id="score-c">0</td>
+    <td>Conformidade: analítico e detalhista.</td>
+  </tr>
+</table>
+
+      <button id="pdf-btn" onclick="gerarPDF()">GERAR PDF</button>
+
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 </body>
+
 </html>

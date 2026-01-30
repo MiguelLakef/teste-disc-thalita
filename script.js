@@ -1,48 +1,48 @@
 const questions = [
-  { question: "Por qual motivo você está fazendo o teste DISC?", options: ["Participando de um processo de seleção.", "Aumentar seu autoconhecimento.", "Pedido da empresa em que trabalha.", "Apenas curiosidade."] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Persistente", "Persuasivo", "Brincalhão", "Sereno"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Sociável", "Energético", "Controlado", "Atencioso"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Competitivo", "Submisso", "Doador", "Convincente"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Reservado", "Respeitoso", "Estimulante", "Habilidoso"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Autossuficiente", "Espirituoso", "Satisfeito", "Sensível"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Charmoso", "Paciente", "Planejador", "Positivo"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Espontâneo", "Organizado", "Seguro", "Tímido"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Franco", "Serviçal", "Ordeiro", "Otimista"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Engraçado", "Amigável", "Vigoroso", "Fiel"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Diplomático", "Minucioso", "Audacioso", "Encantador"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Alegre", "Confiante", "Previsível", "Culto"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Inofensivo", "Independente", "Idealista", "Inspirado"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Profundo", "Decidido", "Irônico", "Demonstrativo"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Mediador", "Desembaraçado", "Ativo", "Musical"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Firme", "Pensativo", "Conversador", "Tolerante"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Líder", "Ativo", "Leal", "Ouvinte"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Atraente", "Detalhista", "Chefe", "Contente"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Agradável", "Produtivo", "Perfeccionista", "Popular"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Vivaz", "Valente", "Comportado", "Equilibrado"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Tranquilo", "Autoritário", "Metido", "Acanhado"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Desinteressado", "Insensível", "Indisciplinado", "Rancoroso"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Ressentido", "Repetitivo", "Inflexível", "Relutante"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Esquecido", "Complicado", "Mandão", "Medroso"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Inoportuno", "Inseguro", "Indeciso", "Impaciente"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Frio", "Desligado", "Imprevisível", "Impopular"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Insatisfeito", "Cabeça Dura", "Casual", "Hesitante"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Simples", "Permissivo", "Orgulhoso", "Cauteloso"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Discutidor", "Incerto", "Esquentado", "Alienado"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Ingênuo", "Negativo", "Ousado", "Indiferente"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Trabalhador", "Preocupado", "Retraído", "Egoísta"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Indelicado", "Tagarela", "Receoso", "Receptivo"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Mandão", "Confuso", "Desorganizado", "Deprimido"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Intolerante", "Inconstante", "Introvertido", "Apático"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Manipulador", "Desordenado", "Triste", "Resmungão"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Cético", "Lento", "Convencido", "Obstinado"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Solitário", "Barulhento", "Tirânico", "Preguiçoso"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Distraído", "Vagaroso", "Desconfiado", "Irritável"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Imprudente", "Agitado", "Relutante", "Vingativo"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Instável", "Astuto", "Crítico", "Acomodado"] },
-  { question: "Selecione o adjetivo que melhor descreve você!", options: ["Animado", "Adaptável", "Aventureiro", "Analítico"] }
+  { question: "1- Por qual motivo você está fazendo o teste DISC?", options: ["Participando de um processo de seleção.", "Aumentar seu autoconhecimento.", "Pedido da empresa em que trabalha.", "Apenas curiosidade."] },
+  { question: "2- Selecione o adjetivo que melhor descreve você!", options: ["Persistente", "Persuasivo", "Brincalhão", "Sereno"] },
+  { question: "3- Selecione o adjetivo que melhor descreve você!", options: ["Sociável", "Energético", "Controlado", "Atencioso"] },
+  { question: "4- Selecione o adjetivo que melhor descreve você!", options: ["Competitivo", "Submisso", "Doador", "Convincente"] },
+  { question: "5- Selecione o adjetivo que melhor descreve você!", options: ["Reservado", "Respeitoso", "Estimulante", "Habilidoso"] },
+  { question: "6- Selecione o adjetivo que melhor descreve você!", options: ["Autossuficiente", "Espirituoso", "Satisfeito", "Sensível"] },
+  { question: "7- Selecione o adjetivo que melhor descreve você!", options: ["Charmoso", "Paciente", "Planejador", "Positivo"] },
+  { question: "8- Selecione o adjetivo que melhor descreve você!", options: ["Espontâneo", "Organizado", "Seguro", "Tímido"] },
+  { question: "9- Selecione o adjetivo que melhor descreve você!", options: ["Franco", "Serviçal", "Ordeiro", "Otimista"] },
+  { question: "10- Selecione o adjetivo que melhor descreve você!", options: ["Engraçado", "Amigável", "Vigoroso", "Fiel"] },
+  { question: "11- Selecione o adjetivo que melhor descreve você!", options: ["Diplomático", "Minucioso", "Audacioso", "Encantador"] },
+  { question: "12- Selecione o adjetivo que melhor descreve você!", options: ["Alegre", "Confiante", "Previsível", "Culto"] },
+  { question: "13- Selecione o adjetivo que melhor descreve você!", options: ["Inofensivo", "Independente", "Idealista", "Inspirado"] },
+  { question: "14- Selecione o adjetivo que melhor descreve você!", options: ["Profundo", "Decidido", "Irônico", "Demonstrativo"] },
+  { question: "15- Selecione o adjetivo que melhor descreve você!", options: ["Mediador", "Desembaraçado", "Ativo", "Musical"] },
+  { question: "16- Selecione o adjetivo que melhor descreve você!", options: ["Firme", "Pensativo", "Conversador", "Tolerante"] },
+  { question: "17- Selecione o adjetivo que melhor descreve você!", options: ["Líder", "Ativo", "Leal", "Ouvinte"] },
+  { question: "18- Selecione o adjetivo que melhor descreve você!", options: ["Atraente", "Detalhista", "Chefe", "Contente"] },
+  { question: "19- Selecione o adjetivo que melhor descreve você!", options: ["Agradável", "Produtivo", "Perfeccionista", "Popular"] },
+  { question: "20- Selecione o adjetivo que melhor descreve você!", options: ["Vivaz", "Valente", "Comportado", "Equilibrado"] },
+  { question: "21- Selecione o adjetivo que melhor descreve você!", options: ["Tranquilo", "Autoritário", "Metido", "Acanhado"] },
+  { question: "22- Selecione o adjetivo que melhor descreve você!", options: ["Desinteressado", "Insensível", "Indisciplinado", "Rancoroso"] },
+  { question: "23- Selecione o adjetivo que melhor descreve você!", options: ["Ressentido", "Repetitivo", "Inflexível", "Relutante"] },
+  { question: "24- Selecione o adjetivo que melhor descreve você!", options: ["Esquecido", "Complicado", "Mandão", "Medroso"] },
+  { question: "25- Selecione o adjetivo que melhor descreve você!", options: ["Inoportuno", "Inseguro", "Indeciso", "Impaciente"] },
+  { question: "26- Selecione o adjetivo que melhor descreve você!", options: ["Frio", "Desligado", "Imprevisível", "Impopular"] },
+  { question: "27- Selecione o adjetivo que melhor descreve você!", options: ["Insatisfeito", "Cabeça Dura", "Casual", "Hesitante"] },
+  { question: "28- Selecione o adjetivo que melhor descreve você!", options: ["Simples", "Permissivo", "Orgulhoso", "Cauteloso"] },
+  { question: "29- Selecione o adjetivo que melhor descreve você!", options: ["Discutidor", "Incerto", "Esquentado", "Alienado"] },
+  { question: "30- Selecione o adjetivo que melhor descreve você!", options: ["Ingênuo", "Negativo", "Ousado", "Indiferente"] },
+  { question: "31- Selecione o adjetivo que melhor descreve você!", options: ["Trabalhador", "Preocupado", "Retraído", "Egoísta"] },
+  { question: "32- Selecione o adjetivo que melhor descreve você!", options: ["Indelicado", "Tagarela", "Receoso", "Receptivo"] },
+  { question: "33- Selecione o adjetivo que melhor descreve você!", options: ["Mandão", "Confuso", "Desorganizado", "Deprimido"] },
+  { question: "34- Selecione o adjetivo que melhor descreve você!", options: ["Intolerante", "Inconstante", "Introvertido", "Apático"] },
+  { question: "35- Selecione o adjetivo que melhor descreve você!", options: ["Manipulador", "Desordenado", "Triste", "Resmungão"] },
+  { question: "36- Selecione o adjetivo que melhor descreve você!", options: ["Cético", "Lento", "Convencido", "Obstinado"] },
+  { question: "37- Selecione o adjetivo que melhor descreve você!", options: ["Solitário", "Barulhento", "Tirânico", "Preguiçoso"] },
+  { question: "38- Selecione o adjetivo que melhor descreve você!", options: ["Distraído", "Vagaroso", "Desconfiado", "Irritável"] },
+  { question: "39- Selecione o adjetivo que melhor descreve você!", options: ["Imprudente", "Agitado", "Relutante", "Vingativo"] },
+  { question: "40- Selecione o adjetivo que melhor descreve você!", options: ["Instável", "Astuto", "Crítico", "Acomodado"] },
+  { question: "41- Selecione o adjetivo que melhor descreve você!", options: ["Animado", "Adaptável", "Aventureiro", "Analítico"] }
 ];
 
-const profiles = ['D','I','S','C'];
+const profiles = ['D', 'I', 'S', 'C'];
 
 const descriptions = {
   D: "Dominância: assertivo, focado em resultados.",
@@ -52,13 +52,23 @@ const descriptions = {
 };
 
 let currentQuestion = 0;
-let scores = { D:0, I:0, S:0, C:0 };
+let scores = { D: 0, I: 0, S: 0, C: 0 };
 
-document.getElementById("start-btn").onclick = () => {
-  document.getElementById("start-screen").style.display = "none";
-  document.getElementById("quiz").style.display = "block";
+document.getElementById('start-btn').addEventListener('click', function () {
+  // esconde a tela inicial
+  document.getElementById('intro-screen').style.display = 'none';
+
+  // mostra o quiz
+  document.getElementById('quiz').style.display = 'block';
+
+  // mostra a dica fixa acima da questão
+  document.getElementById('fixed-hint').style.display = 'block';
+
+  // chama a primeira pergunta
   showQuestion();
-};
+});
+
+
 
 function showQuestion() {
   if (currentQuestion < questions.length) {
@@ -83,22 +93,27 @@ function showQuestion() {
 }
 
 function showResults() {
-  document.getElementById("quiz").style.display = "none";
-  document.getElementById("results").style.display = "block";
-  const tbody = document.getElementById("result-body");
-  tbody.innerHTML = "";
+  document.getElementById('quiz').style.display = 'none';
+  document.getElementById('results').style.display = 'block';
 
-  profiles.forEach(p => {
+  const tbody = document.getElementById('result-body');
+  tbody.innerHTML = '';
+
+  ['D', 'I', 'S', 'C'].forEach(profile => {
     tbody.innerHTML += `
       <tr>
-        <td><strong>${p}</strong></td>
-        <td>${scores[p]}</td>
-        <td>${descriptions[p]}</td>
+        <td><strong>${profile}</strong></td>
+        <td>${scores[profile]}</td>
+        <td>${descriptions[profile]}</td>
       </tr>
     `;
   });
+
+  // 🔴 AQUI é o ponto-chave
+  document.getElementById('pdf-btn').onclick = gerarPDF;
 }
 
-function generatePDF() {
+
+ function gerarPDF() {
   window.print();
 }
