@@ -52,7 +52,13 @@ const descriptions = {
 };
 
 let currentQuestion = 0;
-let scores = { D: 0, I: 0, S: 0, C: 0 };
+let scores = {
+  D: 0,
+  I: 0,
+  E: 0,
+  C: 0
+};
+
 
 document.getElementById('start-btn').addEventListener('click', function () {
   // esconde a tela inicial
@@ -71,33 +77,62 @@ document.getElementById('start-btn').addEventListener('click', function () {
 
 
 function showQuestion() {
-  if (currentQuestion < questions.length) {
-    const q = questions[currentQuestion];
-    document.getElementById("question").innerText = q.question;
-    const options = document.getElementById("options");
-    options.innerHTML = "";
-
-    q.options.forEach((opt, idx) => {
-      const btn = document.createElement("button");
-      btn.innerText = opt;
-      btn.onclick = () => {
-        if (currentQuestion > 0) scores[profiles[idx]]++;
-        currentQuestion++;
-        showQuestion();
-      };
-      options.appendChild(btn);
-    });
-  } else {
+  if (currentQuestion >= questions.length) {
     showResults();
+    return;
   }
+
+  const q = questions[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((opt, idx) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.innerText = opt;
+
+    btn.addEventListener("click", () => {
+
+      // NÃO pontua a primeira pergunta (motivo do teste)
+      if (currentQuestion !== 0) {
+        switch (idx) {
+          case 0:
+            scores.D++;
+            break;
+          case 1:
+            scores.I++;
+            break;
+          case 2:
+            scores.E++;
+            break;
+          case 3:
+            scores.C++;
+            break;
+        }
+      }
+
+      currentQuestion++;
+      showQuestion();
+    });
+
+    optionsDiv.appendChild(btn);
+  });
 }
+
+
+
 
 function showResults() {
   document.getElementById('quiz').style.display = 'none';
   document.getElementById('results').style.display = 'block';
 
-  const tbody = document.getElementById('result-body');
-  tbody.innerHTML = '';
+  const tbody = 
+  document.getElementById("score-d").innerText = scores.D;
+  document.getElementById("score-i").innerText = scores.I;
+  document.getElementById("score-e").innerText = scores.E;
+  document.getElementById("score-c").innerText = scores.C;
 
   ['D', 'I', 'S', 'C'].forEach(profile => {
     tbody.innerHTML += `
